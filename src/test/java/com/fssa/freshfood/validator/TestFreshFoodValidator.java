@@ -2,11 +2,14 @@ package com.fssa.freshfood.validator;
 
 
 import java.time.LocalDate;
+
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+
 import com.fssa.freshfood.errors.FreshFoodValidatorErrors;
 import com.fssa.freshfood.model.FreshFood;
-import com.fssa.freshfood.validator.FreshFoodValidator;
+
+
 
 public class TestFreshFoodValidator {
 
