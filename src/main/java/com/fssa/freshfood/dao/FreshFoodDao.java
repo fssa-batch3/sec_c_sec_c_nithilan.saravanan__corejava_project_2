@@ -60,12 +60,14 @@ public class FreshFoodDao {
 		String query = "DELETE FROM food WHERE foodname = ?";
 		int rows;
 		try (Connection con = ConnectionUtil.getConnection()) {
-			PreparedStatement pst = con.prepareStatement(query);
+			
+			try(PreparedStatement pst = con.prepareStatement(query)){
 			pst.setString(1, name);
 			rows = pst.executeUpdate();
 			if (rows == 0) {
 				throw new Exception("Deletion completed");
 			}
+		}
 		}
 		return (rows > 0) ? true : false;
 	}
