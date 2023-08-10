@@ -3,8 +3,8 @@ package com.fssa.freshfood.validator;
 
 import java.time.LocalDate;
 
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import com.fssa.freshfood.errors.FreshFoodValidatorErrors;
 import com.fssa.freshfood.model.FreshFood;
