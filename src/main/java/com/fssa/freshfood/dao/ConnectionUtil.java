@@ -16,8 +16,9 @@ public class ConnectionUtil {
 		passWord = System.getenv("DATABASE_PASSWORD");
 
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(url, userName, passWord);
+			System.out.println(con);
 			System.out.println("Connected");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -26,8 +27,9 @@ public class ConnectionUtil {
 		return con;
 	}
 
-	public static void main(String[] args) {
-		getConnection();
-	}
+//	public static void main(String[] args) {
+//		getConnection();
+//	}
+//	
 
 }

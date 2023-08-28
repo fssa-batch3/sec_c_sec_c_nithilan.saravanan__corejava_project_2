@@ -15,6 +15,14 @@ public class FreshFoodValidator {
 		if (food == null) {
 			throw new Exception(FreshFoodValidatorErrors.INVALID_NULL);
 		}
+		validateFoodName(food.getFoodName());
+		validateFoodId(food.getFoodId());
+		validateHotelName(food.getHotelName());
+		validateAddress(food.getAddress());
+		validatePrice(food.getPrice());
+		validateRating(food.getRating());
+		validateuploadedDate(food.getUploadedDate());
+		validateFoodImageLink(food.getFoodImageLink());
 		return true;
 	}
 

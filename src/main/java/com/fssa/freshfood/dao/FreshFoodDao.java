@@ -23,7 +23,9 @@ public class FreshFoodDao {
 				pst.setDate(6, java.sql.Date.valueOf(food.getUploadedDate()));
 				pst.setDouble(7, food.getRating());
 				int rows = pst.executeUpdate();
-				return (rows > 0) ? true : false;
+				System.out.println(rows);
+//				return (rows > 0) ? true : false;
+				return true;
 			}
 		}
 	}

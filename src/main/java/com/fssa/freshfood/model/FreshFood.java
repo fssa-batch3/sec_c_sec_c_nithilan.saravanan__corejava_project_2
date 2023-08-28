@@ -97,6 +97,12 @@ public class FreshFood {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
+	
+	@Override
+	public String toString(){
+	return 	"foodname:"+ foodName+	"food price"+price;
+		
+	}
 
 //	private long phoneNumber;
 
