@@ -20,19 +20,19 @@ public class FreshFoodValidator {
 		validateHotelName(food.getHotelName());
 		validateAddress(food.getAddress());
 		validatePrice(food.getPrice());
-		validateRating(food.getRating());
+		validateRating(food.getRating()); 
 		validateuploadedDate(food.getUploadedDate());
 		validateFoodImageLink(food.getFoodImageLink());
 		return true;
 	}
-
+ 
 	// Validation for Food Name
 	public static boolean validateFoodName(String foodName) throws Exception {
 		if (foodName == null || foodName.trim().equals("")) {
 			throw new Exception(FreshFoodValidatorErrors.INVALID_FOODNAME);
 		}
 
-		String regex = "^[a-zA-Z]*$";
+		String regex = "^[a-zA-Z ]{2,55}$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(foodName);
 		boolean isMatch = matcher.matches();
@@ -40,7 +40,7 @@ public class FreshFoodValidator {
 		if (!isMatch) {
 			throw new Exception(FreshFoodValidatorErrors.INVALID_PATTERN_FOODNAME);
 		}
-
+ 
 		return true;
 	}
 
@@ -58,7 +58,7 @@ public class FreshFoodValidator {
 			throw new Exception(FreshFoodValidatorErrors.INVALID_HOTELNAME);
 		}
 
-		String regex = "^[a-zA-Z0-9]+$";
+		String regex = "^[a-zA-Z ]{2,55}$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(hotelName);
 		boolean isMatch = matcher.matches();
@@ -88,6 +88,7 @@ public class FreshFoodValidator {
 
 	// Validation for Rating
 	public static boolean validateRating(Double rating) throws Exception {
+		//TODO range <5
 		if (rating < 0) {
 			throw new Exception(FreshFoodValidatorErrors.INVALID_RATING);
 		}
@@ -120,3 +121,4 @@ public class FreshFoodValidator {
 		return true;
 	}
 }
+//TODO exits delete

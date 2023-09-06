@@ -19,11 +19,11 @@ public class FreshFood {
 			LocalDate uploadedDate, double rating) {
 		this.foodName = foodName;
 		this.foodId = foodId;
-		this.hotelName = hotelName;
+		this.hotelName = hotelName; 
 		this.address = address;
 		this.foodImageLink = foodImageLink;
 		this.price = price;
-		this.uploadedDate = uploadedDate;
+		this.uploadedDate = uploadedDate; 
 		this.rating = rating;
 	}
 
@@ -97,12 +97,16 @@ public class FreshFood {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
-	
+
 	@Override
-	public String toString(){
-	return 	"foodname:"+ foodName+	"food price"+price;
-		
+	public String toString() {
+		return "FreshFood [foodName=" + foodName + ", foodId=" + foodId + ", hotelName=" + hotelName + ", address="
+				+ address + ", foodImageLink=" + foodImageLink + ", price=" + price + ", uploadedDate=" + uploadedDate
+				+ ", rating=" + rating + "]";
 	}
+	
+	
+	
 
 //	private long phoneNumber;
 

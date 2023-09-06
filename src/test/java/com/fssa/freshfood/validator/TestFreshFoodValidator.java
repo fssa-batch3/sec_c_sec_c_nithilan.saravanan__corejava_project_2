@@ -13,8 +13,9 @@ import com.fssa.freshfood.model.FreshFood;
 
 public class TestFreshFoodValidator {
 
+
 	// Sample valid and invalid FreshFood instances for testing
-	FreshFood food = new FreshFood("briyani", 3, "A2B", "Chennai",
+	FreshFood food = new FreshFood("briyani", 3, "AToB", "Chennai",
 			"https://norecipes.com/wp-content/uploads/2017/05/chicken-biryani-006.jpg", 200.0,
 			LocalDate.of(2005, 11, 11), 4.4);
 	

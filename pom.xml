@@ -48,6 +48,11 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>com.fssa.corejava</groupId>
+			<artifactId>nithilan.corejava</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 
