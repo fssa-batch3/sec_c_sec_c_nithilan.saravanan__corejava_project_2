@@ -8,8 +8,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.fssa.freshfood.model.FreshFood;
+import com.fssa.freshfood.util.*;
 
-import day02.Practice.Logger;
+
 
 public class TestFreshFoodService {
 
