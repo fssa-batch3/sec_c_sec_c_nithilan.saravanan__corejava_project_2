@@ -79,14 +79,16 @@ public class FreshFoodDao {
 
 	// Method to update a food item's hotel name and price in the database by its
 	// name
-	public static boolean update(String foodname, String hotelname, double price) throws Exception {
+	public static boolean update(String foodname, String foodimagelink, double price) throws Exception {
 		try (Connection con = ConnectionUtil.getConnection()) {
-			String query = "UPDATE food SET  hotelname = ?, price = ? WHERE foodname = ?";
+			String query = "UPDATE food SET  foodimagelink = ?, price = ? WHERE foodname = ?";
 			try (PreparedStatement pst = con.prepareStatement(query)) {
-				pst.setString(1, hotelname);
+				pst.setString(1, foodimagelink);
 				pst.setDouble(2, price);
 				pst.setString(3, foodname);
+				System.out.println(pst);
 				int rows = pst.executeUpdate();
+				
 				System.out.println("Number of affected rows: " + rows);
 				return (rows > 0) ? true : false;
 			}

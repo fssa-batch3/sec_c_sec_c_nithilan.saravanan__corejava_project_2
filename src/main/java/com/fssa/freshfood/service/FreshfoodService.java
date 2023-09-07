@@ -28,7 +28,7 @@ public class FreshfoodService {
 	}
 	
 	public static boolean updateFoodService(String foodname, String hotelname, double price) throws Exception {
-		if (ffvalidate.validateFoodName(foodname)&& ffvalidate.validateHotelName(hotelname) && ffvalidate.validatePrice(price)) {
+		if (ffvalidate.validateHotelName(hotelname) && ffvalidate.validatePrice(price)) {
 			ffDao.update(foodname,hotelname,price);
 		}
 		return true;
