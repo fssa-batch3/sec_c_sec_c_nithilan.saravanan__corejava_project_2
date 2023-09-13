@@ -24,7 +24,7 @@ public class FreshfoodService {
 			ffDao.createFood(ff); // if valid the service layer create food method will be called 
 		}
 		return true;
-
+ 
 	}
 	
 	public static boolean updateFoodService(String foodname, String hotelname, double price) throws Exception {

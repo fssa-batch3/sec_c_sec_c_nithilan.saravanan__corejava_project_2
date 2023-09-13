@@ -54,7 +54,7 @@ public class FreshFoodDao {
 						fresh.setRating(resultSet.getDouble("rating"));
 
 					}
-				}
+				} 
 			}
 		}
 		return fresh;
